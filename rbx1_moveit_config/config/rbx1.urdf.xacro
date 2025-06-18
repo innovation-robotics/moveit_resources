@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rbx1">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+    <xacro:arg name="ros2_control_hardware_type" default="mock_components" />
+
+    <!-- Import rbx1 urdf file -->
+    <xacro:include filename="$(find moveit_resources_rbx1_description)/urdf/rbx1.urdf" />
+
+    <!-- Import rbx1 ros2_control description -->
+    <xacro:include filename="rbx1.ros2_control.xacro" />
+    <xacro:include filename="rbx1_hand.ros2_control.xacro" />
+
+    <xacro:rbx1_ros2_control name="rbx1FakeSystem" initial_positions_file="$(arg initial_positions_file)" ros2_control_hardware_type="$(arg ros2_control_hardware_type)"/>
+    <xacro:rbx1_hand_ros2_control name="rbx1HandFakeSystem" ros2_control_hardware_type="$(arg ros2_control_hardware_type)"/>
+</robot>

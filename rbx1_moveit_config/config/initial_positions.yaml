@@ -1,0 +1,14 @@
+# Default initial positions for the panda arm's ros2_control fake system
+# initial_positions:
+#   rbx1_joint1: 0.0
+#   rbx1_joint2: 0.625
+#   rbx1_joint3: 0.579
+#   rbx1_joint4: -0.444
+#   rbx1_joint5: 0.947
+initial_positions:
+  rbx1_joint1: 0.0
+  rbx1_joint2: 0.0
+  rbx1_joint3: 0.0
+  rbx1_joint4: 0.0
+  rbx1_joint5: 0.0
+  rbx1_joint6: 0.0
